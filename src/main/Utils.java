@@ -5,36 +5,42 @@ import java.util.*;
 public class Utils {
     public static void main(String[] args) {
 
-        // String to char array ------------------
-        String s = "Hello world";
-        char[] sArray = s.toCharArray();
-        System.out.println(Arrays.toString(sArray));
         /*
+         * String to array char
          * Output :
          * [H, e, l, l, o,  , w, o, r, l, d]
          */
-
-
-        // Array sort -----------------------------
-        Arrays.sort(sArray);
+        String s = "Hello world";
+        char[] sArray = s.toCharArray();
         System.out.println(Arrays.toString(sArray));
+
+
         /*
+         * Array Sort
          * Output :
          * [ , H, d, e, l, l, l, o, o, r, w]
          */
+        Arrays.sort(sArray);
+        System.out.println(Arrays.toString(sArray));
 
 
-        // Foreach array --------------------------
-        for (char i: sArray) {
-            System.out.print(i);
-        }
         /*
+         * Foreach array
          * Output :
          *  Hdellloorw
          */
+        for (char i: sArray) {
+            System.out.print(i);
+        }
 
 
-        // Foreach List<String> -------------------
+        /*
+         * Foreach List<String>
+         * Output :
+         * A
+         * B
+         * C
+         */
         List<String> someList = new ArrayList<String>();
         someList.add("A");
         someList.add("B");
@@ -43,15 +49,16 @@ public class Utils {
         someList.forEach(index ->{
             System.out.println(index);
         });
+
+
+
         /*
+         * Foreach key-value
          * Output :
-         * A
-         * B
-         * C
+         * Key : Key2 Value : Value2
+         * Key : Key1 Value : Value1
+         * Key : Key3 Value : Value3
          */
-
-
-        // Foreach key-value ----------------------
         Map<String, String> mapList = new HashMap<>();
         mapList.put("Key1", "Value1");
         mapList.put("Key2", "Value2");
@@ -59,11 +66,5 @@ public class Utils {
         mapList.forEach((key,value)->{
             System.out.println("Key : " + key + " Value : " + value);
         });
-        /*
-         * Output :
-         * Key : Key2 Value : Value2
-         * Key : Key1 Value : Value1
-         * Key : Key3 Value : Value3
-         */
     }
 }

@@ -22,7 +22,7 @@ public class Fibonacci {
         // Recursive
         int j = 0;
         for (int i=0; i<num; i++){
-            System.out.println(fibonacci(j)+" ");
+            System.out.print(fibonacci(j)+" ");
             j++;
         }
     }
